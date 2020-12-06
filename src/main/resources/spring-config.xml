@@ -5,49 +5,7 @@
        http://www.springframework.org/schema/beans/spring-beans.xsd">
     <import resource="config-product.xml"/>
     <import resource="config-employee.xml"/>
-    <bean name="product" class="springintro.bean.Product"/>
-    
-    <bean name="featuredProduct" class="springintro.bean.Product">
-		<constructor-arg name="name" value="Ultimate Olive Oil"/>
-        <constructor-arg name="description" value="The purest olive oil on the market"/>
-		<constructor-arg name="price" value="9.95"/>
-    </bean>
-    
-    <bean name="featuredProduct2" class="springintro.bean.Product">
-        <constructor-arg index="0" value="Fish Oil"/>
-        <constructor-arg index="1" value="The Fish oil on the market"/>
-        <constructor-arg index="2" value="10.3"/>
-    </bean>
 
     <bean id="localDate" class="java.time.LocalDate"
-        factory-method="now"/>
-      
-    <bean name="employee1" class="springintro.bean.Employee">
-        <property name="homeAddress" ref="simpleAddress"/>
-        <property name="firstName" value="Junior"/>
-        <property name="lastName" value="Moore"/>
-    </bean>
-
-    <bean name="employee2" class="springintro.bean.Employee">
-        <constructor-arg name="firstName" value="Senior"/>
-        <constructor-arg name="lastName" value="Moore2"/>
-        <constructor-arg name="homeAddress" ref="simpleAddress2"/>
-    </bean>
-    
-    <bean name="simpleAddress" class="springintro.bean.Address">
-        <constructor-arg name="line1" value="151 Corner Street"/>
-        <constructor-arg name="line2" value="152"/>
-        <constructor-arg name="city" value="Albany"/>
-        <constructor-arg name="state" value="NY"/>
-        <constructor-arg name="zipCode" value="99999"/>
-        <constructor-arg name="country" value="US"/>
-    </bean>
-    <bean name="simpleAddress2" class="springintro.bean.Address">
-        <constructor-arg name="line1" value="89 Street"/>
-        <constructor-arg name="line2" value="898"/>
-        <constructor-arg name="city" value="Afgh"/>
-        <constructor-arg name="state" value="MASH"/>
-        <constructor-arg name="zipCode" value="2565"/>
-        <constructor-arg name="country" value="IR"/>
-    </bean>
+          factory-method="now"/>
 </beans>
