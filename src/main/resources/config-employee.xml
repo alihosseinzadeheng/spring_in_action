@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <import resource="config-address.xml"/>
+    <bean name="employee1" class="springintro.bean.Employee">
+        <property name="homeAddress" ref="simpleAddress"/>
+        <property name="firstName" value="Junior"/>
+        <property name="lastName" value="Moore"/>
+    </bean>
+
+    <bean name="employee2" class="springintro.bean.Employee">
+        <constructor-arg name="firstName" value="Senior"/>
+        <constructor-arg name="lastName" value="Moore2"/>
+        <constructor-arg name="homeAddress" ref="simpleAddress2"/>
+    </bean>
+
+</beans>
