@@ -8,4 +8,8 @@
 
     <bean id="localDate" class="java.time.LocalDate"
           factory-method="now"/>
+    <!--<Just as an example>-->
+    <bean id="executorService" class="java.util.concurrent.Executors"
+          factory-method="newCachedThreadPool"
+          destroy-method="shutdown"/>
 </beans>
